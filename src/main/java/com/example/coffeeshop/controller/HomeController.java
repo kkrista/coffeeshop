@@ -1,6 +1,4 @@
 package com.example.coffeeshop.controller;
-
-// import com.example.coffeeshop.global.GlobalData;
 import com.example.coffeeshop.entity.Product;
 import com.example.coffeeshop.service.CategoryService;
 import com.example.coffeeshop.service.ManufacturerService;
@@ -37,6 +35,8 @@ public class HomeController {
     public String shop(Model model, String keyword) {
         return findPaginated(0, model, keyword);
     } 
+
+    
 
     //pagination
 
