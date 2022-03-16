@@ -37,6 +37,14 @@
         margin-bottom: 30px;
         border: none;
       }
+
+      p {
+        font-style: italic;
+      }
+
+      .card-body {
+        padding: 3rem;
+      }
       
     </style>
   </head>
@@ -171,7 +179,7 @@
             style="margin-top: 20px;"
             th:each="product : ${products}"
           >
-            <div class="row no-gutters" style="border: darkgray solid 2px">
+            <div class="row no-gutters" style="border: dotted lightgray solid 1px">
               <div
                 class="col-sm-5 d-flex justify-content-center"
                 style="padding: 50px"
@@ -180,7 +188,7 @@
                   class=""
                   style="
                     max-width: 100%;
-                    border: lightgray solid 4px;
+                    border: lightgray solid 3px;
                     border-radius: 5px;
                   "
                   th:src="@{${'/productImages/' + product.imageName}}"
@@ -203,6 +211,8 @@
               </div>
             </div>
           </div>
+
+          
           <button type="button">
             <a href="#top" style="text-decoration: none; color: black;">Back to top</a>
           </button>
