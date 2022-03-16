@@ -28,10 +28,21 @@
       nav {
         background-color: pink;
       }
+
+      button {
+        border-radius: 6px;
+        padding: 10px;
+        background-color: pink;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
       
     </style>
   </head>
   <body>
+    <div id="top" class="content">
+      test
+    </div>
     <nav
       class="navbar navbar-expand-lg navbar-light fixed-top"
       
@@ -122,7 +133,6 @@
             </div>
           </form>
 
-          <!-- <h4 style="color: #9C0F48 !important; margin-top: 30px;"></h4> -->
           <ul class="list-group">
             <a th:href="@{/shop}" style="text-decoration: none; color: black"
               ><li
@@ -188,17 +198,13 @@
                     style="background-color: darkgray !important; color: black"
                     >View Product</a
                   >
-                  <!-- <a
-                    href=""
-                    th:href="@{/addToCart/{id}(id = ${product.id})}"
-                    class="btn"
-                    style="background-color: darkgrey !important; color: pink"
-                    >Add to cart</a
-                  > -->
                 </div>
               </div>
             </div>
           </div>
+          <button type="button">
+            <a href="#top" style="text-decoration: none; color: black;">BACK TO TOP</a>
+          </button>
         </div>
       </div>
     </div>
