@@ -38,8 +38,6 @@ public class HomeController {
 
     
 
-    //pagination
-
     @GetMapping("/shop/page/{pageno}")
     public String findPaginated(@PathVariable int pageno, Model model, @Param("keyword") String keyword) {
         
@@ -86,6 +84,7 @@ public class HomeController {
         return "viewProduct";
     }
 
+    
     
 
     
