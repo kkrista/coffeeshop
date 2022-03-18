@@ -103,15 +103,6 @@
     <div class="row">
 
       <div class="col-sm-3 pt-3">
-        <form th:action="@{/shop}" class="form-inline mb-2">
-          <div>
-            <input type="text" id="txtSearch" name="keyword" class="form-control" />
-          </div>
-          <div>
-            <input style="background-color: lightgray; color: black" @keypress.enter.prevent type="submit" value="Go"
-              class="btn form-control" />
-          </div>
-        </form>
 
         <ul class="list-group">
           <a th:href="@{/shop}" style="text-decoration: none; color: black">
@@ -134,10 +125,44 @@
         </ul>
       </div>
 
-      <div class="col-sm-8" style="padding-top: 20px;">
-        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, temporibus, pariatur fugit quo, magnam animi voluptatum tempore molestiae quod quibusdam ratione consequuntur quam enim voluptate rem esse expedita laboriosam labore.</h5>
+      <div class="col-sm-8" style="padding-top: 4px;">
+        <h6 class="display-4 font-italic">Our goal is to provide quality coffee products to make your coffee more enjoyable...</h6>
        
-        <div class="total">Check our [[${totalItems}]] coffee products!</div>
+        <!-- <div class="total">
+          <h6>
+            Check our [[${totalItem}]] coffee products below or enter a keyword!
+          </h6></div>
+
+        <form th:action="@{/shop}" class="form-inline mb-2">
+          <div>
+            <input type="text" id="txtSearch" name="keyword" class="form-control" />
+          </div>
+          <div>
+            <input style="background-color: lightgray; color: black" @keypress.enter.prevent type="submit" value="Go"
+              class="btn form-control" />
+          </div>
+        </form> -->
+      </div>
+
+      <div class="col-sm-3 pt3">
+        
+      </div>
+
+      <div class="col-sm-6" style="margin-top: 20px;">
+        <div class="total">
+          <h6>
+            Check our [[${totalItem}]] coffee products below or enter a keyword!
+          </h6></div>
+  
+        <form th:action="@{/shop}" class="form-inline mb-2">
+          <div>
+            <input type="text" id="txtSearch" name="keyword" class="form-control" />
+          </div>
+          <div>
+            <input style="background-color: lightgray; color: black" @keypress.enter.prevent type="submit" value="Go"
+              class="btn form-control" />
+          </div>
+        </form>
       </div>
 
 
