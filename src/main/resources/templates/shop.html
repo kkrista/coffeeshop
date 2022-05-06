@@ -43,11 +43,9 @@
       display: grid;
       grid-template-columns: 300px 300px 300px;
       grid-template-rows: auto;
-      gap: 2rem;
+      gap: 3rem;
       justify-content: center;
       position: static;
-      display: grid;
-      
     }
 
     .card {
@@ -84,8 +82,6 @@
       margin-right: 8px;
 
     }
-
-
   </style>
 </head>
 
@@ -239,44 +235,6 @@
         </div>
       </section>
 
-      <!-- <div class="col-sm-8">
-          <div
-            class="card"
-            style="margin-top: 20px;"
-            th:each="product : ${products}"
-          >
-            <div class="row no-gutters" style="border: dotted lightgray solid 1px">
-              <div
-                class="col-sm-5 d-flex justify-content-center"
-                style="padding: 50px"
-              >
-                <img
-                  class=""
-                  style="
-                    max-width: 100%;
-                    border: lightgray solid 3px;
-                    border-radius: 5px;
-                  "
-                  th:src="@{${'/productImages/' + product.imageName}}"
-                  th:alt="${product.name}"
-                />
-              </div>
-              <div class="col-sm-7 d-flex justify-content-center">
-                <div class="card-body">
-                  <h3 class="card-title h3" th:text="${product.name}"></h3>
-                  <h4>Price: € <span th:text="${product.price}"></span></h4>
-                  <p th:text="${product.description}"></p>
-                  <a
-                    href="#"
-                    th:href="@{/shop/viewproduct/{id}(id=${product.id})}"
-                    class="btn"
-                    style="color: pink"
-                    >View Product</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div> -->
 
     </div>
 
