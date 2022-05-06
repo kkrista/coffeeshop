@@ -33,10 +33,9 @@
       }
 
       header {
-        background-color: lightgray;
-        height: 800px;
+        background-color: rgb(236, 234, 234);
+        height: 600px;
         text-align: center;
-        padding-top: 220px;
       }
 
       footer {
@@ -49,6 +48,70 @@
         border-radius: 5px;
         text-decoration: none;
       }
+
+      .title-word {
+  animation: color-animation 6s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 100vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+
+.link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-outline-light {
+    color: rgb(92, 92, 92);
+    border-color: rgb(83, 84, 83);
+}
     </style>
   </head>
   <body style="background-color: #f9e4d4 !important">
@@ -112,14 +175,23 @@
     </nav>
 
     <header>
-      <h1 class="display-1" style="padding-bottom: 30px">
-        Oops! You do not have admin rights.
-      </h1>
-
-      <a class="btn btn-outline-dark btn-lg" th:href="@{/shop}" href="#"
-        >Back</a
-      >
+      <div class="container">
+        <h2 class="title">
+          <span class="title-word title-word-1">Life</span>
+          <span class="title-word title-word-2">Happens</span>
+          <span class="title-word title-word-3">Coffee</span>
+          <span class="title-word title-word-4">Helps</span>
+        </h2>
+      </div>
     </header>
+
+    <footer>
+      <div class="link">
+        <a class="btn btn-outline-light btn-lg" th:href="@{/shop}" href="#"
+      >Go Coffee Shopping!</a>
+
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
