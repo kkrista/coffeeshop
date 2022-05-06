@@ -432,7 +432,7 @@ body {
 }
 
 .card h2 {
-  color: rgba(0, 0, 0, 0.3);
+  color: white;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -525,16 +525,48 @@ body {
   
   .card {
     padding: 20px;
+    margin-top: 150px;
   }
   
   .card h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .card .row input[type="submit"] {
     width: 100%;
   }
 }
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    pink 0%,
+    #f0c9ed 29%,
+    #a4ecf6 67%,
+    beige 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 13s linear infinite;
+  display: inline-block;
+      font-size: 90px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
      
   </style>
   </head>
@@ -619,13 +651,21 @@ body {
       
       <div class="jumbotron p-3 p-md-5 text-black-50 rounded bg-light">
       <div class="col-md-10 px-0">
-        <h1 class="display-4 font-italic">Welcome Nora's Coffee Shop</h1>
-        <p class="lead my-3" style="color: pink;">Here you will find the tools of a passionate coffee lover</p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="animate-charcter" style="font-family: 'Acme', sans-serif;"> Welcome Nora's Coffee Shop</h3>
+            </div>
+          </div>
+        </div>
+        <!-- <h1 class="display-4 font-italic">Welcome Nora's Coffee Shop</h1> -->
+        <p class="lead my-3" style="color: pink; text-align: center; font-style: italic;">Here you will find the tools of a passionate coffee lover</p>
 
 
-        <p class="lead my-3">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="lead my-3" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <br>
-        <p class="lead mb-3"><a href="/shop" class="text-black-50 font-weight-bold">Check out our coffee products!</a></p>
+        <p class="lead mb-3"><a href="/shop" class="text-black-50 font-weight-bolder" style="border: 1px lightgrey solid; padding: 10px; border-radius: 10px;">Check our products!</a></p>
       </div>
     </div>
     </header>
