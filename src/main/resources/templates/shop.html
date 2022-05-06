@@ -49,9 +49,9 @@
     }
 
     .card {
-      width: 350px;
+      /* width: 300px;
       padding: 2rem;
-      margin: 10px;
+      margin: 10px; */
       border: solid lightgray 1px;
       position: static;
 
@@ -175,6 +175,7 @@
               All Products
             </li>
           </a>
+          
           <a href="" th:each="category, iStat : ${categories}" th:href="@{/shop/category/{id}(id=${category.id})}"
             style="text-decoration: none; color: black">
             <li class="list-group-item" th:text="${category.name}" style="
@@ -185,6 +186,10 @@
           </a>
         </ul>
       </div>
+
+      <figure>
+        <a th:href="@{/kahvilaitteet/{id}(id=${kahvilaite.id})}"><img class="img-fluid tuote-kuva" th:src="@{/kahvilaite/tuoteKuva/{id}(id=${kahvilaite.id})}" alt="Kuva tuotteesta"></a>
+    </figure>
 
       <div class="col-sm-8" style="padding-top: 4px;">
         <h6 class="display-4 font-italic">Our goal is to provide quality coffee products to make your coffee experience
@@ -215,7 +220,7 @@
       </div>
 
 
-      <section class="card-grid">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="card" th:each="product : ${products}">
 
           <img class="" style="
@@ -233,7 +238,7 @@
           </div>
 
         </div>
-      </section>
+      </div>
 
 
     </div>

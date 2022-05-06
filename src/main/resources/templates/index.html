@@ -508,27 +508,68 @@ main {
   }
 }
 
-.animate-charcter
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    pink 0%,
-    #f0c9ed 29%,
-    #a4ecf6 67%,
-    beige 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 13s linear infinite;
-  display: inline-block;
-      font-size: 100px;
+.title-word {
+  animation: color-animation 6s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 40vh;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 90px;
+  text-transform: uppercase;
+}
+
+.link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-outline-light {
+    color: rgb(92, 92, 92);
+    border-color: rgb(83, 84, 83);
 }
 
 @keyframes textclip {
@@ -633,7 +674,15 @@ main {
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h3 class="animate-charcter" style="font-family: 'Acme', sans-serif;"> Welcome Nora's Coffee Shop</h3>
+              <!-- <h3 class="animate-charcter" style="font-family: 'Acme', sans-serif;"> Welcome Nora's Coffee Shop</h3> -->
+              <div class="container">
+                <h2 class="title">
+                  <span class="title-word title-word-1">Welcome</span>
+                  <span class="title-word title-word-2">Noras</span>
+                  <span class="title-word title-word-3">Coffee</span>
+                  <span class="title-word title-word-4">Shop</span>
+                </h2>
+              </div>
             </div>
           </div>
         </div>
