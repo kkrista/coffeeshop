@@ -42,7 +42,7 @@ public class HomeController {
     public String findPaginated(@PathVariable int pageno, Model model, @Param("keyword") String keyword) {
         
         if(keyword != null) {
-            Page<Product> productList = productService.getProductPaginate(pageno, 6);
+            Page<Product> productList = productService.getProductPaginate(pageno, 20);
             model.addAttribute("products", productService.getAllProduct(keyword));
             // model.addAttribute("products", productList);
             model.addAttribute("currentPage", pageno);
@@ -54,7 +54,7 @@ public class HomeController {
             
 
         } else {
-            Page<Product> productList = productService.getProductPaginate(pageno, 6);
+            Page<Product> productList = productService.getProductPaginate(pageno, 20);
             // model.addAttribute("products", productService.getAllProduct(keyword));
             model.addAttribute("products", productList);
             model.addAttribute("currentPage", pageno);
