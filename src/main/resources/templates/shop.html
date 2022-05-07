@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+  xmlns:shiro=http://www.pollix.at/thymeleaf/shiro>
 
 <head>
   <meta charset="UTF-8" />
@@ -187,10 +188,6 @@
         </ul>
       </div>
 
-      <figure>
-        <a th:href="@{/kahvilaitteet/{id}(id=${kahvilaite.id})}"><img class="img-fluid tuote-kuva" th:src="@{/kahvilaite/tuoteKuva/{id}(id=${kahvilaite.id})}" alt="Kuva tuotteesta"></a>
-    </figure>
-
       <div class="col-sm-8" style="padding-top: 4px;">
         <h6 class="display-4 font-italic">Our goal is to provide quality coffee products to make your coffee experience
           more enjoyable...</h6>
@@ -248,7 +245,7 @@
     </button>
 
 
-    <ul class="pagination d-flex justify-content-center">
+    <!-- <ul class="pagination d-flex justify-content-center">
 
       <li th:if="${currentPage !=0}" class="page-item">
         <a class="page-link" th:href="@{'/shop/page/'+${currentPage-1}} ">❮</a>
@@ -270,7 +267,7 @@
             >❯</a
           >
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 
