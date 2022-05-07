@@ -1,9 +1,0 @@
-2022-03-15 20:03:39 jdbc[34]: exception
-org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('Calling all introverts. This one is for those who just can\u2019t rn. A more relaxed, half-caffeinated blend for w... (269)"; SQL statement:
-update product set category_id=?, description=?, image_name=?, manufacturer_id=?, name=?, price=?, supplier_id=? where id=? [22001-200]
-2022-03-15 20:22:13 jdbc[34]: exception
-org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'The Swan One-Touch Espresso Machine is an easy-to-use semi-automatic espresso machine in a stylish retro design. Add your favor... (285)"; SQL statement:
-update product set category_id=?, description=?, image_name=?, manufacturer_id=?, name=?, price=?, supplier_id=? where id=? [22001-200]
-2022-03-15 20:23:28 jdbc[34]: exception
-org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'The Swan One-Touch Espresso Machine is an easy-to-use semi-automatic espresso machine in a stylish retro design. Add your favor... (286)"; SQL statement:
-update product set category_id=?, description=?, image_name=?, manufacturer_id=?, name=?, price=?, supplier_id=? where id=? [22001-200]

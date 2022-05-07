@@ -1,0 +1,3 @@
+2022-05-07 11:01:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'The powerful and stylish Smeg Espresso Machine puts coffee-level coffees at your fingertips. Whether you want to start your mor... (275)"; SQL statement:
+insert into product (category_id, description, image_name, manufacturer_id, name, price, supplier_id, id) values (?, ?, ?, ?, ?, ?, ?, ?) [22001-200]
