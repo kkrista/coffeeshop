@@ -50,9 +50,6 @@
     }
 
     .card {
-      /* width: 300px;
-      padding: 2rem;
-      margin: 10px; */
       border: solid lightgray 1px;
       position: static;
 
@@ -83,6 +80,31 @@
       margin-right: 8px;
 
     }
+
+    h5 {
+      color: grey;
+      text-align: center;
+      
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+
+  body:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    height: 100%;
+    }
+
+h1 {
+  color: pink;
+  font-family: 'Righteous', serif;
+  font-size: 8em; 
+  text-shadow: .03em .03em 0 rgb(98, 98, 98);
+  }
+
   </style>
 </head>
 
@@ -196,16 +218,16 @@
       </div>
 
       <div class="col-sm-3 pt3">
+        <div class="total">
+          <h5>
+            Check our
+          </h5>
+          <h1 style="text-align: center;">[[${totalItem}]]</h1>
+          <h5 style="margin-bottom: 20px;">coffee products below or enter a keyword!</h5>
+        </div>
       </div>
 
-      <div class="col-sm-6" style="margin-top: 20px;">
-        <div class="total">
-          <h6>
-            Check our [[${totalItem}]] coffee products below or enter a keyword!
-          </h6>
-        </div>
-
-        <form th:action="@{/shop}" class="form-inline mb-2">
+        <form th:action="@{/shop}" class="form-inline mb-2" style="margin-left: 20px;">
           <div>
             <input type="text" id="txtSearch" name="keyword" class="form-control" />
           </div>
