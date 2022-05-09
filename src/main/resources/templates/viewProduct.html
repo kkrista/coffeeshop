@@ -28,6 +28,25 @@
       p {
         font-style: italic;
       }
+
+      @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+
+  body:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    height: 100%;
+    }
+
+h1 {
+  color: pink;
+  margin-bottom: 20px;
+  font-family: 'Righteous', serif;
+  font-size: 4em; 
+  text-shadow: .03em .03em 0 rgb(98, 98, 98);
+  }
     </style>
   </head>
   <body style="background: linear-gradient(90deg, rgb(250, 237, 228) 0%, rgb(252, 252, 252) 97%);">
@@ -106,10 +125,12 @@
           />
         </div>
         <div class="col-sm-7 mt-5">
-          <h2 th:text="${product.name}"></h2>
-          <p th:text="${product.category.name}"></p>
-          <h2>€ <span th:text="${product.price}"></span></h2>
+          <h4 th:text="${product.category.name}" style="color: pink; margin-bottom: 20px;"></h4>
+          <h1 th:text="${product.name}"></h1>
+          <h3 style="color: grey;">€ <span th:text="${product.price}"></span></h3>
+          
 
+          <hr>
           <p th:text="${product.description}"></p>
           <h4>
             <a
@@ -121,7 +142,7 @@
                 text-decoration: none;
                 color: rgb(147, 143, 148);
                 height: auto;
-                width: 100px;
+                
                 margin-top: 20px;
               "
             ></a>
